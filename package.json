@@ -1,0 +1,23 @@
+{
+  "name": "Prototype",
+  "version": "0.0.1",
+  "author": "Sam",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sgussman/StoryShare"
+  },
+  "license": "MIT",
+
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.x",
+    "express3-handlebars": "*"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }  
+}

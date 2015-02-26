@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+	<title>Class Feedback</title>
+	<meta charset="utf-8">
+	<meta http-equiv="refresh" content="10">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+	<div>
+		<h2>Count</h2>
+		{{#each this}}
+		<div class="click">
+			<h3> {{action}} {{name}} {{time}}
+		</div>
+		{{/each}}
+
+	</div>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+</body>
+</html>
