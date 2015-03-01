@@ -5,3 +5,8 @@ input {
 label {
 	margin-left: 10px;
 }
+
+#additionalInfo {
+	height: 100px;
+	width: 70%;
+}

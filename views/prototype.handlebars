@@ -10,21 +10,25 @@
 <body>
 	<div>
 		<h2>Give Shadi Feedback</h2>
-		<p class="directions">This is a prototype that's trying to give Shadi real-time feedback while he's teaching. If Shadi introduces a topic and want him to elaborate more on it click <b>Pause</b>. If you understand a topic but Shadi keeps droning on, click <b>Fast-forward</b>. And if you get confused and need him to back over something click <b>Rewind</b>.</p>
-		<br>
-		<p class="directions"> We'll be compiling your clicks, and once enough people click on an option it'll triger the corresponding light to come on in our box and a noise to sound in the classroom, letting Shadi know he needs to pivot.
+		<p class="directions">This is a prototype that's trying to give your instructor real-time feedback about the class's understanding. If you get confused at any point in the lecture, click the button corresponding to your level of confusion.
 		</p>
 		<br>
-		<p> For trying out our prototype, you'll get a piece of candy for everytime you click. To get candy you need to enter your name in the form, but you are allowed to make anonymous clicks.</p>
+		<p class="directions"> We'll be compiling your clicks, and once enough people click on an option it'll trigger the corresponding light to come on in our box, letting your instructor know that they're being confusing.
+		</p>
+		<br>
+		<p> You can choose to leave a note explaining what is confusing your or asking your instructor a question. To leave anonymous feedback simply leave the name field blank.</p>
 	</div>
 
 	<form id="feedback_form" method="post" action="/count">
 		<label>Name: </label><input type="text" id="name" name = "name" value="" class="text_input">
 		<br>
-		<label> Rewind: </label> <button name="action" type="submit" value="rewind"><i class="fa fa-backward"></i></button>
-		<label> Pause: </label> <button name="action" type="submit" value="pause"><i class="fa fa-pause"></i></button>
+		<label> Mildly Confused: </label> <button name="action" type="submit" value="rewind"><i class="fa fa-backward"></i></button>
+		<label> Moderately Confused: </label> <button name="action" type="submit" value="pause"><i class="fa fa-pause"></i></button>
 
-		<label> Fast-Forward: </label> <button name="action" type="submit" value="forward"><i class="fa fa-forward"></i></button>
+		<label> Extremely Confused: </label> <button name="action" type="submit" value="forward"><i class="fa fa-forward"></i></button>
+
+		<label>Additional Info: </label><input type="text" id="additionalInfo" name = "additionalInfo" value="" class="text_input">
+		<br>
 	</form>
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="js/prototype.js"></script>
