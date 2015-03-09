@@ -9,7 +9,7 @@ var handlebars = require('express3-handlebars');
 
 var main = require('./routes/main');
 var count = require('./routes/count');
-
+var instructor = require('./routes/instructor');
 
 var app = express();
 
@@ -35,10 +35,12 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', main.view);
+app.post('/', main.firePrompt);
 
 app.get('/count', count.view);
 app.post('/count', count.update);
 
+app.get('/instructor', instructor.view);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

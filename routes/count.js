@@ -1,7 +1,12 @@
+//setup click monitoring
 var testclick={action: "action", name: "name",time: "time"};
 var clicks=[];
 clicks.push(testclick);
 
+var totalClicks = 0;
+var greenClicks = 0;
+var yellowClicks = 0;
+var redClicks = 0;
 
 exports.view = function(req, res){
 	res.render('count', clicks);

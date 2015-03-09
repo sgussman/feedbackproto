@@ -10,24 +10,26 @@
 <body>
 	<div>
 		<h2>Give Instructor Feedback</h2>
-		<p class="directions">This is a prototype that's trying to give your instructor real-time feedback about the class's understanding. If you get confused at any point in the lecture, click the button corresponding to your level of confusion.
+		<p class="directions"> Your instructor will trigger a prompt to display on this screen at some point during lecture. Do your best to respond to the prompt and indicate your level of understanding in less than a minute. Note: This is not meant to be hard, just to assess your understanding of material.
 		</p>
 		<br>
-		<p class="directions"> We'll be compiling your clicks, and once enough people click on an option it'll trigger the corresponding light to come on in our box, letting your instructor know that they're being confusing.
-		</p>
-		<br>
-		<p> You can choose to leave a note explaining what is confusing your or asking your instructor a question. To leave anonymous feedback simply leave the name field blank.</p>
+		<p>To leave anonymous feedback simply leave the name field blank.</p>
+
+
 	</div>
 
 	<form id="feedback_form" method="post" action="/count">
 		<label>Name: </label><input type="text" id="name" name = "name" value="" class="text_input">
 		<br>
-		<button name="action" type="submit" value="rewind">Mildly Confused</button>
-		<button name="action" type="submit" value="pause">Moderately Confused</button>
-		<button name="action" type="submit" value="forward">Extremely Confused</button>
+		<button name="action" type="submit" value="green">Understand</button>
+		<button name="action" type="submit" value="yellow">Moderately Confused</button>
+		<button name="action" type="submit" value="red">Extremely Confused</button>
 		<br>
 		<br>
-		<label>Additional Info: </label><input type="text" id="additionalInfo" name = "additionalInfo" value="" class="text_input">
+		<label>Prompt: </label>
+		<p> {{prompt}}</p>
+		<input type="hidden" id="promptNumber" name = "promptNumber" value="{{promptNumber}}">
+		<input type="text" id="additionalInfo" name = "additionalInfo" value="" class="text_input">
 		<br>
 	</form>
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+	<title>Class Feedback</title>
+	<meta charset="utf-8">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div>
+		<h2>Write Feedback Prompts</h2>
+		<p class="directions">This is a prototype that's trying to give you an easy, fast, and informative method for gathering feedback from your students and dynamically teaching to meet your students' needs.
+		</p>
+		<br>
+		<p class="directions"> Inside the <b>Prompt Box</b>, write a prompt you'd like your students to respond. We suggest using specific prompts like: "What is the difference between using jquery and javascript to access the DOM? Why would you use one over the other?", instead of general prompts like: "Do you understand using jquery to navigate the DOM?".  Add as many prompts as you want to use in your lecture, and when ready for feedback click <b>fire</b>
+		</p>
+		<br>
+		<p> Students will then have <b>1 minute</b> to respond to your prompt and indicate their level of understanding. Writen feedback will begin displaying on your screen, but you can always look at it later.  After the minute is up, the traffic light will flash <b>green</b> if your students indicate a comfortable level of understanding, <b>yellow</b> if your students indicate moderate confusion, and <b>red</b> if your students indicate significant discomfort with the material.</p>
+	</div>
+	<div id="prompt-container">
+		<form class="prompt-form" method="post" action="/">
+			<input type="hidden" class="prompt-number-field" value="1">
+			<label>Prompt: </label><textarea class="promptbox" name="prompt"></textarea>
+			<br>
+			<button name="action" type="submit" value="fire!">Fire!</button>
+			<br>
+		</form>
+	</div>
+	<button type="button" id="add-prompt">Add prompt</button>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="js/prompt.js"></script>
+</body>
+</html>
