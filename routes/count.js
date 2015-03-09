@@ -28,5 +28,14 @@ exports.update = function(req, res){
 	clicks.push(temp);
 	console.log("After clicks: "+clicks);
 
+	totalClicks++;
+	if (action=="green"){
+		greenClicks++
+	} else if (action=="yellow"){
+		yellowClicks++;
+	} else if (action=="red"){
+		redClicks++;
+	}
+	
 	res.redirect('/');
 }
