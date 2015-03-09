@@ -9,7 +9,7 @@ var yellowClicks = 0;
 var redClicks = 0;
 
 exports.view = function(req, res){
-	res.render('count', clicks);
+	res.render('count', {clicks: clicks, total: totalClicks, green: greenClicks, yellow: yellowClicks, red: redClicks});
 };
 
 exports.update = function(req, res){
@@ -36,6 +36,6 @@ exports.update = function(req, res){
 	} else if (action=="red"){
 		redClicks++;
 	}
-	
+
 	res.redirect('/');
 }

@@ -8,9 +8,16 @@
 </head>
 
 <body>
+	<table style="width: 100%">
+		<th style="width: 100%">
+			<td>Total Count: {{total}}</td>
+			<td>Green Clicks: {{green}}</td>
+			<td>Yellow Clicks: {{yellow}}</td>
+			<td>Red Clicks: {{red}}</td>
+		</th>
 	<div>
 		<h2>Count</h2>
-		{{#each this}}
+		{{#each clicks}}
 		<div class="click">
 			<h3> {{action}} {{name}} {{time}} {{comment}}</h3>
 		</div>
