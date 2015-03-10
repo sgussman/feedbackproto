@@ -5,8 +5,8 @@ exports.view = function(req, res){
 };
 
 exports.submit = function(req, res){
-	var data = req.body.name+"   "+req.body.action+"   "+req.body.promptNumber+"\n"+req.body.additionalInfo;
-	fs.writeFile('public/feedback', data, function(err) {
+	var data = req.body.action+"   "+req.body.name+"   "+req.body.promptNumber+"\n<br>\n"+req.body.additionalInfo+'\n<br>';
+	fs.appendFile('public/feedback.txt', data, function(err) {
 		if (err) {
 			console.log("There was an error!");
 			throw err;

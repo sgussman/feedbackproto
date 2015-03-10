@@ -5,7 +5,7 @@ function reloadData()
    console.log("Reloading data.");
    var now = new Date();
    // url = 'feedback?'+now.getTime();
-   url = '/feedback';
+   url = '/feedback.txt';
 
    try {
       req = new XMLHttpRequest();
@@ -41,7 +41,7 @@ function processReqChange()
          dataDiv.innerHTML = req.responseText;
 
          // Start new timer (1 min)
-         timeoutID = setTimeout('reloadData()', 60000);
+         timeoutID = setTimeout('reloadData()', 500);
       }
       else
       {

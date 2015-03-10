@@ -7,5 +7,5 @@ exports.view = function(req, res){
 exports.firePrompt = function(req, res){
 	prompt = req.body.prompt;
 	number = req.body.promptNumber;
-	console.log(number);
+	console.log("Prompt Number: "+number);
 }
