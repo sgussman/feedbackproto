@@ -22,6 +22,16 @@ function promptListener(e){
 	var val = $(this).serialize();
 	$.post('/', val);
 	$(this).find("button").prop("disabled", true);
+	setTimeout(function(){
+		$.get('/getCount', callback);
+	}, 60000);
 }
 
 addPromptListeners();
+
+var callback = function(res){
+	console.log(res.light);
+	dataDiv = $('#traffic-light');
+	dataDiv.innerHTML = "<h3 class='color-"+res.light+"'>"+res.light+"</h3>";
+	$('#traffic-light').html("<h3 class='color-"+res.light+"'>"+res.light+"</h3>");
+}

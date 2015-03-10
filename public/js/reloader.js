@@ -41,7 +41,7 @@ function processReqChange()
          dataDiv.innerHTML = req.responseText;
 
          // Start new timer (1 min)
-         timeoutID = setTimeout('reloadData()', 500);
+         timeoutID = setTimeout('reloadData()', 4000);
       }
       else
       {
