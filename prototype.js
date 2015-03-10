@@ -8,7 +8,7 @@
 var value;
 //Add Eventlisteners to the form
 document.getElementById('feedback_form').addEventListener('submit', function (e) {
-	// e.preventDefault();								//prevent default action
+	e.preventDefault();								//prevent default action
 	var name = $("#name").val();						//get name
 	console.log(value);
 }, false);

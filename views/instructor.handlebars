@@ -5,9 +5,10 @@
 	<meta charset="utf-8">
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+	<script src="js/reloader.js"></script>
 </head>
 
-<body>
+<body onload="reloadData()">
 	<div>
 		<h2>Write Feedback Prompts</h2>
 		<p class="directions">This is a prototype that's trying to give you an easy, fast, and informative method for gathering feedback from your students and dynamically teaching to meet your students' needs.
@@ -28,6 +29,11 @@
 		</form>
 	</div>
 	<button type="button" id="add-prompt">Add prompt</button>
+	<br>
+	<h1> Student Data</h1><br>
+	<div id="student-data">
+
+	</div>
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="js/prompt.js"></script>
 </body>

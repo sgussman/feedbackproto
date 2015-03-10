@@ -41,7 +41,7 @@ app.get('/count', count.view);
 app.post('/count', count.update);
 
 app.get('/instructor', instructor.view);
-
+app.post('/instructor', instructor.submit);
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

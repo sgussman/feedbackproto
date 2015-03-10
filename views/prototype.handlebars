@@ -18,20 +18,21 @@
 
 	</div>
 
-	<form id="feedback_form" method="post" action="/count">
+	<form id="feedback_form" method="post" action="/instructor">
 		<label>Name: </label><input type="text" id="name" name = "name" value="" class="text_input">
+		<br>
+		<label>Prompt: </label>
+		<p> {{prompt}}</p>
 		<br>
 		<button name="action" type="submit" value="green">Understand</button>
 		<button name="action" type="submit" value="yellow">Moderately Confused</button>
 		<button name="action" type="submit" value="red">Extremely Confused</button>
 		<br>
-		<br>
-		<label>Prompt: </label>
-		<p> {{prompt}}</p>
 		<input type="hidden" id="promptNumber" name = "promptNumber" value="{{promptNumber}}">
 		<input type="text" id="additionalInfo" name = "additionalInfo" value="" class="text_input">
 		<br>
 	</form>
+
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="js/prototype.js"></script>
 </body>
