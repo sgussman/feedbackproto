@@ -1,39 +1,75 @@
 <!doctype html>
 <html>
+
 <head>
-	<title>Class Feedback</title>
-	<meta charset="utf-8">
-	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
+    <title>Class Feedback</title>
+    <meta charset="utf-8">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/prompt.css" rel="stylesheet">
+
+
 </head>
 
 <body>
-	<div>
-		<h2>Give Instructor Feedback</h2>
-		<p class="directions"> Your instructor will trigger a prompt to display on this screen at some point during lecture. Do your best to respond to the prompt and indicate your level of understanding in less than a minute. Note: This is not meant to be hard, just to assess your understanding of material.
-		</p>
-		<br>
-		<p>To leave anonymous feedback simply leave the name field blank.</p>
+
+    <div class="header1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 top navbar-static-top">
+                    <h1>feedback loop</h1>
+                    <br/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div>
+            <h2>Give Instructor Feedback</h2>
+            <p class="directions"> Your instructor will trigger a prompt to display on this screen at some point during lecture. Do your best to respond to the prompt and indicate your level of understanding in less than a minute. Note: This is not meant to be hard, just to assess your understanding of material.
+            </p>
+            <br/>
+            <!-- <p>To leave anonymous feedback simply leave the name field blank.</p> -->
 
 
-	</div>
+        </div>
 
-	<form id="feedback_form" method="post" action="/instructor">
-		<label>Name: </label><input type="text" id="name" name = "name" value="" class="text_input">
-		<br>
-		<label>Prompt: </label>
-		<p> {{prompt}}</p>
-		<br>
-		<button name="action" type="submit" value="green">Understand</button>
-		<button name="action" type="submit" value="yellow">Moderately Confused</button>
-		<button name="action" type="submit" value="red">Extremely Confused</button>
-		<br>
-		<input type="hidden" id="promptNumber" name = "promptNumber" value="{{promptNumber}}">
-		<input type="text" id="additionalInfo" name = "additionalInfo" value="" class="text_input">
-		<br>
-	</form>
+        <form id="feedback_form" method="post" action="/instructor">
+            <!-- <label>Name: </label>
+        <input type="text" id="name" name="name" value="" class="text_input">-->
 
-	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+            <div class="row buttons">
+                <div class="col-md-4">
+                    <button class="btn btn-success btn-lg btn-block" name="action" type="submit" value="green">Understand</button>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-warning btn-lg btn-block" name="action" type="submit" value="yellow">Moderately Confused</button>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-danger btn-lg btn-block" name="action" type="submit" value="red">Extremely Confused</button>
+                </div>
+            </div>
+
+            <br/>
+
+            <div class="row prompt-label">
+                <h2><label>Prompt</label></h2>
+                <p>{{prompt}}</p>
+
+                <input type="hidden" id="promptNumber" name="promptNumber" value="{{promptNumber}}">
+                <input type="text" id="additionalInfo" name="additionalInfo" value="" class="text_input">
+                
+            </div>
+        </form>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="js/prototype.js"></script>
 </body>
+
 </html>

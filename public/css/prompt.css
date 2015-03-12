@@ -1,0 +1,25 @@
+.header1 {
+	background-color: black;
+	color: white;
+	font-size: 20px;
+    vertical-align: center;
+
+}
+
+.top {
+	vertical-align: center;
+}
+
+.buttons {
+	text-align: center;
+}
+
+.prompt-label {
+	text-align: center;
+}
+
+.detailed-output {
+    overflow: scroll;
+    height: 168px;
+    margin-top: 19px;
+}
