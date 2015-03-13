@@ -1,14 +1,15 @@
 var count = 1;
 $("#add-prompt").click(function() {
 	count++;
-	var html = "<form class='prompt_form' method='post' action='/'>";
+	var html = "<div class='col-md-3'>"
+		html+= "<form class='prompt_form' method='post' action='/'>";
 		html+= "<input type='hidden' class='prompt-number-field' value='"+count+"'>";
-		html+= "<label>Prompt: </label><textarea class='promptbox' name='prompt'></textarea>";
-		html+= "<br>";
-		html+= "<button name='action' type='submit' value='fire!'>Fire!</button>";
-		html+= "<br>";
+		html+= "<label>Prompt: </label><textarea class='form-control promptbox' name='prompt'></textarea>";
+		html+= "<br/>";
+		html+= "<button class='btn btn-lg' name='action' type='submit' value='fire!'>Fire!</button>";
 		html+= "</form>";
-	$("#prompt-container").append(html);
+		html+= "</div>";
+	$("#prompt-row").append(html);
 	addPromptListeners();
 });
 
