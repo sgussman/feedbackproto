@@ -24,15 +24,15 @@ function promptListener(e){
 	$(this).find("button").prop("disabled", true);
 	setTimeout(function(){
 		$.get('/getCount', callback);
-	}, 60000);
+	}, 6000);
 }
 
 addPromptListeners();
 
 var callback = function(res){
 	console.log(res);
-	$("#total").innerHTML = res.total;
-	$("#red").innerHTML = res.red;
-	$("#yellow").innerHTML = res.yellow;
-	$("#green").innerHTML = res.green;
+	$("#total").html(res.total);
+	$("#red").html(res.red);
+	$("#yellow").html(res.yellow);
+	$("#green").html(res.green);
 }
