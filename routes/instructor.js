@@ -31,21 +31,26 @@ exports.submit = function(req, res){
 
 exports.count = function(req, res){
 	console.log("Doing the count thing.");
-	var data = "none";
-		if (redClicks >= yellowClicks && redClicks >= greenClicks){
-			data = "red";
-		} else if (yellowClicks >= redClicks && yellowClicks >= greenClicks){
-			data = "yellow";
-		} else if (greenClicks >= yellowClicks && greenClicks >= redClicks){
-			data = "green";
-		}
+	var data = {
+		total: totalClicks,
+		red: redClicks,
+		green: greenClicks,
+		yellow: yellowClicks
+	}
+		// if (redClicks >= yellowClicks && redClicks >= greenClicks){
+		// 	data = "red";
+		// } else if (yellowClicks >= redClicks && yellowClicks >= greenClicks){
+		// 	data = "yellow";
+		// } else if (greenClicks >= yellowClicks && greenClicks >= redClicks){
+		// 	data = "green";
+		// }
 
-		if (greenClicks == yellowClicks && redClicks == greenClicks){
-			data = "none";
-		}
+		// if (greenClicks == yellowClicks && redClicks == greenClicks){
+		// 	data = "none";
+		// }
 		totalClicks = 0;
 		greenClicks = 0;
 		redClicks = 0;
 		yellowClicks = 0;
-		res.send({light:data});
+		res.send(data);
 }

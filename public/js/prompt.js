@@ -30,8 +30,9 @@ function promptListener(e){
 addPromptListeners();
 
 var callback = function(res){
-	console.log(res.light);
-	dataDiv = $('#traffic-light');
-	dataDiv.innerHTML = "<h3 class='color-"+res.light+"'>"+res.light+"</h3>";
-	$('#traffic-light').html("<h3 class='color-"+res.light+"'>"+res.light+"</h3>");
+	console.log(res);
+	$("#total").innerHTML = res.total;
+	$("#red").innerHTML = res.red;
+	$("#yellow").innerHTML = res.yellow;
+	$("#green").innerHTML = res.green;
 }

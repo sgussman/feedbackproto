@@ -9,8 +9,8 @@
     <script src="js/reloader.js"></script>
 
     <!-- CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
     <link href="css/prompt.css" rel="stylesheet">
 
 
@@ -37,16 +37,16 @@
                 <br/>
                 <ul class="list-group">
                     <li class="list-group-item">
-                        <span class="badge">{{total}}</span> Total Responses
+                        <span class="badge">{{total}}</span> Total Responses: <div id="total"></div>
                     </li>
                     <li class="list-group-item list-group-item-danger">
-                        <span class=" danger badge">{{red}}</span> Understand Very Well
+                        <span class=" danger badge">{{red}}</span> Understand Very Well:<div id="red"></div>
                     </li>
                     <li class="list-group-item list-group-item-warning">
-                        <span class=" danger badge">{{yellow}}</span> Understands Not Too Well
+                        <span class=" danger badge">{{yellow}}</span> Understands Not Too Well:<div id="yellow"></div>
                     </li>
                     <li class="list-group-item list-group-item-success">
-                        <span class=" danger badge">{{green}}</span> Understands Very Little
+                        <span class=" danger badge">{{green}}</span> Understands Very Little:<div id="green"></div>
                     </li>
                 </ul>
             </div>
